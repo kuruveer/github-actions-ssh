@@ -35,5 +35,9 @@ jobs:
             IdentityFile ~/.ssh/${{ env.NAME }}.key
           END
         shell: bash
-      - name: run cmd
-        run: ssh ${{env.NAME}} pwd
+      - name: create file
+        run: ssh ${{env.NAME}} mkdir hello
+      - name: create file
+        run: ssh ${{env.NAME}} echo "hey hi" > hello/index.html
+      - name: print
+        run: ssh ${{env.NAME}} cat hello/index.html
