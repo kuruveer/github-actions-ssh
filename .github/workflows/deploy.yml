@@ -34,5 +34,6 @@ jobs:
             User ${{ env.USER }}
             IdentityFile ~/.ssh/${{ env.NAME }}.key
           END
-      shell: bash
-      - name: ssh ${{env.NAME}} pwd
+        shell: bash
+      - name: run cmd
+        run: ssh ${{env.NAME}} pwd
