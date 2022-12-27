@@ -36,9 +36,9 @@ jobs:
           END
         shell: bash
       - name: run commands
-        run: ssh ${{env.NAME}} << END
+        run: ssh ${{env.NAME}} << EOF
               mkdir hello-world
               cd hello-world
               echo "hey hi" > index.html
               cat index.html
-            END
+            EOF
