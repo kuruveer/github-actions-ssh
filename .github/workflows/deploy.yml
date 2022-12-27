@@ -42,3 +42,4 @@ jobs:
               echo "hey hi" > index.html
               cat index.html
             EOF
+        shell: bash
