@@ -36,10 +36,11 @@ jobs:
           END
         shell: bash
       - name: run commands
-        run: ssh ${{env.NAME}} << EOF
-              mkdir hello-world
-              cd hello-world
-              echo "hey hi" > index.html
-              cat index.html
-            EOF
+        run:  |
+          ssh ${{env.NAME}} << EOF
+            mkdir hello-world
+            cd hello-world
+            echo "hey hi" > index.html
+            cat index.html
+          EOF
         shell: bash
